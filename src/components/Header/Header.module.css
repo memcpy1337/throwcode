@@ -1,0 +1,46 @@
+.header {
+    background-color: #24292e;
+    position: relative;
+}
+.logoImage {
+    float: left;
+    padding: 10px;
+}
+
+.logoImage img {
+    padding-top: 5px;
+   height: 40px;
+   width: 200px;
+}
+.itemLink {
+    display: inline-block;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #fff;
+    padding-left: 15px;
+}
+.itemLink a, a:link, a:visited, a:focus, a:active{
+    color:white;
+    text-decoration:none; 
+    cursor: pointer;
+  }
+.itemLink a:hover {
+    color: gray;
+    cursor: pointer;
+}
+.nav {
+position:absolute;
+left:50%;
+top:50%;
+transform: translate(-50%,-50%);
+}
+.authBlock {
+    float: right;
+    margin-right: 20px;
+}
+.authBlock div {
+    float: left;
+    clear: none;
+    padding-left: 3px;
+    padding-top: 9px;
+}
