@@ -1,0 +1,7 @@
+.problems {
+    display: grid;
+    grid-template-areas: 
+    "filter problems";
+    grid-template-columns: 1.5fr 10fr;
+    grid-template-rows: auto 1fr;
+}

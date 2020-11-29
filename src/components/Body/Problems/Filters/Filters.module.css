@@ -1,0 +1,30 @@
+.filters {
+    background-color: #1f1f23;
+    grid-area: filter;
+    position: fixed;
+    top: 69px;
+    bottom: 0%;
+}
+.filtersContent {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.filterTitle {
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 26px;
+}
+.filterTitle::after {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}
+.luckButton {
+    width: 200px;
+    height: 50px;
+}

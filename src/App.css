@@ -1,4 +1,4 @@
-.App {
-  display: grid;
-  
+.app-wrapper {
+  min-height: 100vh;
+  background-color: #0e0e10;
 }

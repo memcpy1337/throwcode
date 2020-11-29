@@ -1,0 +1,15 @@
+.problem {
+    border: solid 1px green;
+    border-radius: 5px;
+}
+.problemTitle {
+color: white;
+}
+.problemTitle::after {
+    content: '';
+    border-top: 1px solid orange;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}

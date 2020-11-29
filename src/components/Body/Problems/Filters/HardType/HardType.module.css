@@ -1,0 +1,24 @@
+.filterHard {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.filterCheckbox {
+    vertical-align:middle;
+    color: white;
+    margin-bottom: 10px;
+
+}
+input {
+    outline:none;
+   }
+.filterHardType::after {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}

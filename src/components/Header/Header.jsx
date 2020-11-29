@@ -16,22 +16,22 @@ let Header = (props) => {
                         <NavLink to="/problems">Задачи</NavLink>
                     </div>
                     <div className={style.itemLink}>
-                        <NavLink to="/problems">Игры</NavLink>
+                        <NavLink to="/games">Игры</NavLink>
                     </div>
                     <div className={style.itemLink}>
-                        <NavLink to="/problems">Статьи</NavLink>
+                        <NavLink to="/articles">Статьи</NavLink>
                     </div>
                     <div className={style.itemLink}>
-                        <NavLink to="/problems">Рейтинг</NavLink>
+                        <NavLink to="/rating">Рейтинг</NavLink>
                     </div>
                 </nav>
             </div>
             <div className={style.authBlock}>
                 <div className={style.buttonAction}>
-                    <ButtonSmall text="Войти" action={() => { }} />
+                    <ButtonSmall >Войти</ButtonSmall>
                 </div>
                 <div className={style.buttonAction}>
-                    <ButtonSmall style='color: black' text="Регистрация" action={() => { }} />
+                <ButtonSmall >Регистрация</ButtonSmall>
                 </div>
             </div>
         </div>

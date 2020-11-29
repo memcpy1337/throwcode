@@ -1,0 +1,23 @@
+.additional {
+    padding-bottom: 20px;
+}
+.additional::after {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+    margin-top: 15px;
+}
+.additionalTitle {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.additionalCheckbox {
+    color: white;
+    margin-bottom: 10px;
+}

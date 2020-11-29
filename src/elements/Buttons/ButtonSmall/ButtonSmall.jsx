@@ -1,12 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import styles from './ButtonSmall.module.css'
-const ButtonSmall = (props) => {
+
+import "./ButtonSmall.css"
+
+const ButtonSmall = ({ children, onClick, className, disabled, active }) => {
+    const classes = classNames(
+        "square_btn",
+        className,
+        { active },
+    );
     return (
-        <div>
-            <Link onClick={props.action} class={styles.square_btn}>{props.text}</Link>
-        </div>
-    )
+        <button
+        className={classes}
+        disabled={disabled}
+        onClick={onClick}>{children}</button>
+    );
+};
+ButtonSmall.propTypes = {
+children: PropTypes.node,
+onClick: PropTypes.func,
+className: PropTypes.string,
+disabled: PropTypes.bool,
+active: PropTypes.bool,
+};
+
+ButtonSmall.defaultProps = {
+children: 'Default button',
+onClick: () => {},
+className: '',
+disabled: false,
+active: false,
 }
 
 export default ButtonSmall;

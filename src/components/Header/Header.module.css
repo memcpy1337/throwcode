@@ -1,10 +1,13 @@
 .header {
     background-color: #24292e;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    grid-area: h;
 }
 .logoImage {
     float: left;
     padding: 10px;
+    margin-left: 15px;
 }
 
 .logoImage img {
@@ -36,11 +39,11 @@ transform: translate(-50%,-50%);
 }
 .authBlock {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .authBlock div {
     float: left;
     clear: none;
-    padding-left: 3px;
-    padding-top: 9px;
+    padding-right: 10px;
+    padding-top: 21px;
 }
