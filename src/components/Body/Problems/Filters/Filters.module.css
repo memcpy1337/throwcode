@@ -1,9 +1,11 @@
 .filters {
     background-color: #1f1f23;
     grid-area: filter;
+    width: 250px;
+}
+.main {
     position: fixed;
-    top: 69px;
-    bottom: 0%;
+    
 }
 .filtersContent {
     margin-left: 20px;

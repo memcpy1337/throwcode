@@ -7,14 +7,16 @@ import Numeric from './Numeric/Numeric';
 const Filters = (props) => {
     return (
         <div className={styles.filters}>
-            <div className={styles.filtersContent}>
-                <div className={styles.filterTitle}>
-                    Фильтры
+            <div className={styles.main}>
+                <div className={styles.filtersContent}>
+                    <div className={styles.filterTitle}>
+                        Фильтры
                 </div>
-                <HardType />
-                <Numeric />
-                <Additional />
-                <ButtonSmall className={styles.luckButton}>Мне повезет!</ButtonSmall>
+                    <HardType />
+                    <Numeric />
+                    <Additional />
+                    <ButtonSmall className={styles.luckButton}>Мне повезет!</ButtonSmall>
+                </div>
             </div>
         </div>
     )

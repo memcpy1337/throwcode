@@ -6,6 +6,12 @@ const Problem = (props) => {
           <div className={styles.problemTitle}>
               <span>Сумма двух чисел</span>
           </div>
+          <div className={styles.problemSolved}>
+              <span>Решили: 200</span>
+          </div>
+          <div className={styles.problemTrying}>
+              <span>Попыток: 400</span>
+          </div>
         </div>
     )
 }

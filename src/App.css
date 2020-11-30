@@ -1,4 +1,10 @@
 .app-wrapper {
-  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "h"
+  "b"
+  "f";
+  grid-template-columns: auto;
+  grid-template-rows: 70px auto 40px;
   background-color: #0e0e10;
 }

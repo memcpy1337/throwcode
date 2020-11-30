@@ -1,10 +1,22 @@
 .problem {
-    border: solid 1px green;
-    border-radius: 5px;
+    border: solid 3px green;
+    border-radius: 15px;
+    height: 100px;
+    width: 200px;
+    justify-items: center;
 }
 .problemTitle {
 color: white;
+text-align: center;
 }
+.problemSolved {
+    color: white;
+    text-align: center;
+    }
+    .problemTrying {
+        color: white;
+        text-align: center;
+        }
 .problemTitle::after {
     content: '';
     border-top: 1px solid orange;

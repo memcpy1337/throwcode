@@ -3,7 +3,6 @@ import Filters from './Filters/Filters';
 import ProblemItems from './ProblemItems/ProblemItems';
 import styles from './Problems.module.css'
 let Problems = (props) => {
-    debugger;
     return (
         <div className={styles.problems}>
             <Filters />

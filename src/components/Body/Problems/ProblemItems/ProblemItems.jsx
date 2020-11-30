@@ -5,6 +5,49 @@ const ProblemItems = (props) => {
     return (
         <div className={styles.problemItems}>
             <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
+            <Problem />
         </div>
     )
 }

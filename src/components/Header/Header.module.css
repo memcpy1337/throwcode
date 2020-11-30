@@ -1,8 +1,8 @@
 .header {
     background-color: #24292e;
+    grid-area: h;
     position: fixed;
     width: 100%;
-    grid-area: h;
 }
 .logoImage {
     float: left;
@@ -32,18 +32,18 @@
     cursor: pointer;
 }
 .nav {
-position:absolute;
-left:50%;
-top:50%;
-transform: translate(-50%,-50%);
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 200px;
 }
 .authBlock {
     float: right;
-    margin-right: 10px;
+    margin-top: -25px;
 }
 .authBlock div {
     float: left;
     clear: none;
     padding-right: 10px;
-    padding-top: 21px;
+    
 }
