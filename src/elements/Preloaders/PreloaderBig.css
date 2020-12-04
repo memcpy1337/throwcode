@@ -1,0 +1,60 @@
+.one {
+  left:38px;
+  top:38px;
+  animation-delay: 1s !important;
+
+}
+.two {
+  left:80px;
+  top:38px;
+  animation-delay:0.125s !important;
+}
+.three {
+  left:122px;
+  top:38px;
+  animation-delay:0.25s !important;
+}
+.four {
+  left:38px;top:80px;animation-delay:0.875s !important;
+}
+.five {
+  left:122px;top:80px;animation-delay:0.375s !important;
+}
+.six {
+  left:38px;top:122px;animation-delay:0.75s !important;
+}
+.seven {
+  left:80px;top:122px;animation-delay:0.625s !important;
+}
+.eight {
+  left:122px;top:122px;animation-delay:0.5s !important;
+}
+@keyframes ldio-9kdb83td32w {
+    0% { background: #025fac }
+    12.5% { background: #025fac }
+    12.625% { background: #24292e }
+    100% { background: #24292e }
+  }
+  .ldio-9kdb83td32w div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #24292e;
+    animation: ldio-9kdb83td32w 1s linear infinite;
+  }
+  .loadingio-spinner-blocks-agpef8kbldv {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: inherit;
+  }
+  .ldio-9kdb83td32w {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-9kdb83td32w div { box-sizing: content-box; }

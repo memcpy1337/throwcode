@@ -1,17 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Problem.module.css'
 const Problem = (props) => {
     return (
         <div className={styles.problem}>
-          <div className={styles.problemTitle}>
-              <span>Сумма двух чисел</span>
-          </div>
-          <div className={styles.problemSolved}>
-              <span>Решили: 200</span>
-          </div>
-          <div className={styles.problemTrying}>
-              <span>Попыток: 400</span>
-          </div>
+            <NavLink to={'/problems/' + props.id}>
+                <div className={styles.problemTitle}>
+                    <span>{props.title}</span>
+                </div>
+                <div className={styles.problemSolved}>
+                    <span>Решили: {props.solved}</span>
+                </div>
+                <div className={styles.problemTrying}>
+                    <span>Попыток: {props.trying}</span>
+                </div>
+            </NavLink>
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import './App.css';
-import Header from './components/Header/Header';
 import Body from './components/Body/Body';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 function App() {
   return (
       <div className='app-wrapper'>
-        <Header />
+        <HeaderContainer />
         <Body />
         <Footer />
       </div>

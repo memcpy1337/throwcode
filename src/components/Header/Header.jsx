@@ -1,7 +1,11 @@
 import React from 'react';
+import Popup from 'reactjs-popup';
 import { Link, NavLink } from 'react-router-dom';
 import ButtonSmall from '../../elements/Buttons/ButtonSmall/ButtonSmall';
 import style from "./Header.module.css"
+import Login from './Login/Login';
+import Register from './Register/Register';
+import LoginContainer from './Login/LoginContainer';
 let Header = (props) => {
     return (
         <div className={style.header}>
@@ -26,14 +30,22 @@ let Header = (props) => {
                     </div>
                 </nav>
             </div>
-            <div className={style.authBlock}>
-                <div className={style.buttonAction}>
-                    <ButtonSmall >Войти</ButtonSmall>
-                </div>
-                <div className={style.buttonAction}>
-                <ButtonSmall >Регистрация</ButtonSmall>
-                </div>
+            {
+                !props.isAuth ?
+
+                    <div className={style.authBlock}>
+                        <div className={style.buttonAction}>
+                            <LoginContainer loginModal={props.loginModal} toogleModal={props.toogleLoginModal} />
+                        </div>
+                        <div className={style.buttonAction}>
+                            <Register registerModal={props.registerModal} toogleModal={props.toogleRegisterModal} />
+                        </div>
+                    </div>
+                    :
+                    <div className={style.authBlock}>
+                        Welcome!
             </div>
+            }
         </div>
     );
 

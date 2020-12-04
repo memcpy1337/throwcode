@@ -1,0 +1,57 @@
+.main {
+    color: white;
+    border-right: solid 3px white;
+    bottom: 0px;
+}
+.descriptionTitle {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.descriptionText {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.descriptionExamplesTitle {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.descriptionExamples::before {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}
+.descriptionCheatsTitle::before {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}
+.descriptionCheatsTitle {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.descriptionCheatsText {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.console {
+    bottom: 0;
+}

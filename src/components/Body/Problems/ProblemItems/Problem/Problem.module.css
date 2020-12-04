@@ -25,3 +25,7 @@ text-align: center;
     margin: 8px 0;
     clear: both;
 }
+.problem:hover {
+    cursor: pointer;
+    background-color: #263238;
+}

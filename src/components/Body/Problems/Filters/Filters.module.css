@@ -5,7 +5,9 @@
 }
 .main {
     position: fixed;
-    
+    background-color: #1f1f23;
+    bottom: 0px;
+    top: 69px;
 }
 .filtersContent {
     margin-left: 20px;
