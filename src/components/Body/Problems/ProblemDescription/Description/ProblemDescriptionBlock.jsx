@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ProblemDescriptionBlock.module.css'
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark, synthwave84, atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { exact } from 'prop-types';
 const ProblemDescriptionBlock = (props) => {
     let examples = props.description.examples.map((p, index) => {
@@ -8,11 +9,11 @@ const ProblemDescriptionBlock = (props) => {
             <div>
                 <div className={styles.descriptionText}>Пример № {index + 1}</div>
                 <div>
-                    <SyntaxHighlighter language="javascript">
-                       {"Ввод: " + p.input}
+                    <SyntaxHighlighter style={atomDark} language="javascript">
+                        {"Ввод: " + p.input}
                     </SyntaxHighlighter>
-                    <SyntaxHighlighter language="javascript">
-                       {"Вывод: " + p.output}
+                    <SyntaxHighlighter style={atomDark} language="javascript">
+                        {"Вывод: " + p.output}
                     </SyntaxHighlighter>
                 </div>
             </div>
@@ -45,9 +46,11 @@ const ProblemDescriptionBlock = (props) => {
                 </div>
             </div>
             <div className={styles.console}>
-                <SyntaxHighlighter language="xml">
-                    Console output ERROR
-            </SyntaxHighlighter>
+                {
+                    props.codeSubmitResult.success == null ? <SyntaxHighlighter style={atomDark}  language="vala">Ожидание решения</SyntaxHighlighter> : props.codeSubmitResult.success ? <SyntaxHighlighter showLineNumbers={false} style={atomDark} wrapLongLines={true} className={styles.goodResult} language="vala">{props.codeSubmitResult.response}</SyntaxHighlighter>
+                      : 
+                      <SyntaxHighlighter style={atomDark} showLineNumbers={false} wrapLongLines={true} className={styles.badResult} language="vala">{props.codeSubmitResult.response}</SyntaxHighlighter>
+                }
             </div>
         </div>
     )

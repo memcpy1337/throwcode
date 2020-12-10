@@ -28,16 +28,48 @@ export const getProblem = (id) => {
         return response.data;
     });
 }
+export const getAuthStatus = () => {
+    return new Promise(function (resolve, reject) {
+        instance.get('Auth/GetAuthStatus').then(
+            response => {
+                debugger;
+                if (response.status === 200) {
+                    resolve(response);
+                } else if (response.status === 401) {
+                    reject(response);
+                }
+            }).catch(e => {
+                debugger;
+                reject(e);
+            })
+
+    })
+}
 export const getAuthToken = (usr, pass) => {
     return new Promise(function (resolve, reject) {
         instance.get('Auth/GetToken/usr=' + usr + "/pass=" + pass)
-        .then(response => {
-            if (response.status === 200) {
+            .then(response => {
+                if (response.status === 200) {
+                    debugger;
+                    resolve(response.data);
+                }
+            }).catch(e => {
+                reject(e.status);
+            })
+    });
+}
+export const submitProblem = (Id, Lang, Code) => {
+    return new Promise(function (resolve, reject) {
+        instance.post('Problems/SubmitProblem', { Id, Lang, Code })
+            .then(response => {
                 debugger;
-                resolve(response.data);
-            }
-        }).catch(e => {
-            reject(e.status);
-        })
+                if (response.status === 200) {
+                    debugger;
+                    resolve(response);
+                }
+            }).catch(e => {
+                debugger;
+                reject(e.status);
+            })
     });
 }

@@ -6,8 +6,8 @@ const ProblemDescription = (props) => {
     debugger;
     return (
         <div className={styles.description}>
-            <ProblemDescriptionBlock description={props.description} />
-            <CodeArea codeArea={props.codeArea} onUpdateCode={props.onUpdateCode} onUpdateCodeMode={props.onUpdateCodeMode}/>
+            <ProblemDescriptionBlock description={props.description} codeSubmitResult={props.codeSubmitResult} />
+            <CodeArea codeArea={props.codeArea} onUpdateCode={props.onUpdateCode} onUpdateCodeMode={props.onUpdateCodeMode} codeSubmit={props.codeSubmit} notAuthError={props.notAuthError}  notAuthErrorToogle={props.notAuthErrorToogle}/>
         </div>
     )
 }

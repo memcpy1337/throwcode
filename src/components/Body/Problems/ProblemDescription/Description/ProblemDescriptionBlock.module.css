@@ -2,6 +2,7 @@
     color: white;
     border-right: solid 3px white;
     bottom: 0px;
+    max-width: 1050px;
 }
 .descriptionTitle {
     text-align: center;
@@ -52,6 +53,20 @@
     margin-bottom: 10px;
     padding: 10px;
 }
+.descriptionCheatsText::after {
+    content: '';
+    border-top: 2px solid #025fac;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    clear: both;
+}
 .console {
     bottom: 0;
+}
+.badResult {
+    background-color: lightcoral;
+}
+.goodResult {
+    color: darkgreen !important;
 }

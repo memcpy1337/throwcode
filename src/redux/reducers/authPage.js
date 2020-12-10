@@ -1,9 +1,10 @@
-import { getAuthToken } from "../../api/requests";
+import { getAuthStatus, getAuthToken } from "../../api/requests";
 
 const LOGIN_FIELD_CHANGE = "LOGIN_FIELD_CHANGE";
 const PASSWORD_FIELD_CHANGE = "PASSWORD_FIELD_CHANGE";
 const SET_AUTH_TOKEN = "SET_AUTH_TOKEN";
 const INCORRECT_AUTH = "INCORRECT_AUTH";
+const GET_AUTH_STATUS = "GET_AUTH_STATUS";
 let initialState = {
     auth: {
         loginField: null,
@@ -15,6 +16,8 @@ let initialState = {
         passwordField: null,
         emailField: null
     },
+    userId: null,
+    userLogin: null,
     isAuth: false,
     jwtToken: null
 }
@@ -42,6 +45,11 @@ const authPage = (state = initialState, action) => {
         case INCORRECT_AUTH: {
             newState = { ...state };
             newState.auth = {...state.auth, invalidAttempt: true}
+            return newState;
+        }
+        case GET_AUTH_STATUS: {
+            debugger;
+            newState = {...state, ...action.data };
             return newState;
         }
         default:
@@ -74,6 +82,12 @@ export const incorrectAuthAC = () => {
         type: INCORRECT_AUTH
     }
 }
+const getAuthStatusAC = (data) => {
+    return {
+        type: GET_AUTH_STATUS,
+        data
+    }
+}
 export const getTokenThunkCreator = (usr, pass) => {
     debugger;
     return (dispatch) => {
@@ -85,7 +99,24 @@ export const getTokenThunkCreator = (usr, pass) => {
             error => {
                 debugger;
                 dispatch(incorrectAuthAC());
-
             });
+    }
+}
+export const getAuthStatusThunkCreator = () => {
+    return (dispatch) => {
+        getAuthStatus().then(
+            response => {
+                dispatch(getAuthStatusAC(response.data));
+            },
+            error => {
+                const obj = {
+                    userId: null,
+                    userLogin: null,
+                    isAuth: false
+                }
+                dispatch(getAuthStatusAC(obj));
+            }
+
+        )
     }
 }
