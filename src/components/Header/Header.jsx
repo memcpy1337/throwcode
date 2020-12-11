@@ -43,7 +43,10 @@ let Header = (props) => {
                     </div>
                     :
                     <div className={style.authBlock}>
-                        Welcome!
+                        <div className={style.profile}>
+                        <img  width="24" height="24" src='https://www.gravatar.com/avatar/bb913e3b525ddce6d0a8ff3a5c6f6338?s=48&d=identicon&r=PG&f=1'></img>
+                        <span style={{marginLeft: 5, color: 'gold'}}>● 550</span>
+                        </div>
             </div>
             }
         </div>
